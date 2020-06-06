@@ -1,0 +1,63 @@
+<head>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="topbar">
+        <span id="bar_themes">Themes</span>
+        <span id="bar_update">Update</span>
+        <span id="bar_settings">Settings</span>
+    </div>
+    <div id="themes">
+        <h1>Themes</h1>
+        <div class="themescontent">
+            <span>
+                <span id="t_dark">Dark</span>
+                <span id="t_light">Light</span>
+            </span>
+            <span id="t_classic">Classic</span>
+        </div>
+    </div>
+    <div id="update">
+        <h1>Update</h1>
+        <div class="updatecontent">
+            <span class="row"><label>Pancake version alpha-0.2</label><label id="changelog">Read the changelog</label></span>
+            <p id="lastUpdate">Last update: 05/06/2020</p>
+            <span class="centerRow">
+                <span id="u_check">
+                    Check for updates
+                </span>
+                <span id="u_install">
+                    Install updates
+                </span>
+            </span>
+        </div>
+    </div>
+    <div id="settings">
+        <h1>Settings</h1>
+        <div class="settingscontent">
+            <span class="row"><input type="checkbox" id="s_bootlogo"><label for="s_bootlogo">Boot logo replacement</label></span>
+            <span class="row"><input type="checkbox" id="s_whiteterm"><label for="s_whiteterm">White terminal text</label></span>
+            <span class="row"><input type="checkbox" id="s_rsstray"><label for="s_rsstray">RSS feed tray icon</label></span>
+            <span class="row"><input type="checkbox" id="s_dashtray"><label for="s_dashtray">Pancake Dashboard tray icon</label></span>
+            <span class="centerRow">
+                <span id="s_save">
+                    Apply settings (requires reboot)
+                </span>
+                <span id="s_uninstall">
+                    Uninstall Pancake
+                </span>
+            </span>
+        </div>
+    </div>
+    <script>
+        let dashstyle = document.createElement("style")
+        top.$file.open("/a/.pancake/dashboard/dashboard.css","String",function(e){dashstyle.innerHTML = e})
+        document.head.appendChild(dashstyle)
+
+        let dashscript = document.createElement("script")
+        top.$file.open("/a/.pancake/dashboard/dashboard.js","String",function(e){dashscript.innerHTML = e})
+        document.body.appendChild(dashscript)
+    </script>
+</body>

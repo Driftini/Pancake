@@ -1,0 +1,445 @@
+@font-face {
+    font-family: Segoe UI;
+    src: url("https://gitlab.com/Driftini/win103/-/raw/dev/res/segoe-ui.ttf");
+}
+
+html, body, button, input, select, option, textarea {
+    font-family: Segoe UI, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.ui_icon span {
+    line-height: 13px;
+    position: relative;
+    bottom: 1px;
+}
+
+.skin_background {
+    background: url(https://gitlab.com/UmbraGIR/win103/raw/dev/res/windows-10-hero-wallpaper-4k.jpg);
+    background-size: cover;
+}
+
+#s42_notif {
+    align-self: center;
+}
+
+.skin_inset, .skin_base, .skin_inset_deep, .skin_outset_deep, .skin_light, .skin_dark, .ui_window, .ui_alert--help .ui_alert__text {
+    border: none;
+    box-shadow: none;
+}
+
+#s42_clock {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 14px;
+}
+
+.ui_window__head__pin, .ui_window__head__config, .ui_window__head__reload, .ui_window__head__help, .ui_window__head__minimize, .ui_window__head__maximize, .ui_window__head__maximized, .ui_window__head__close {
+    width: 17px;
+    height: 17px;
+    margin-left: 0px;
+    line-height: 19px !important;
+    background-color: transparent !important;
+    transition: 0.2s !important;
+    border: none !important;
+}
+
+.ui_window__head__pin:hover, .ui_window__head__config:hover, .ui_window__head__reload:hover, .ui_window__head__help:hover, .ui_window__head__minimize:hover, .ui_window__head__maximize:hover, .ui_window__head__maximized:hover {
+    background-color: transparent !important;
+}
+
+.btn, button:not(.unstyled) {
+    border: none;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, textarea {
+    border: none;
+    box-shadow: none;
+}
+
+.ui_window {
+    box-shadow: 0 0 24px 1px rgba(0,0,0,0.8);
+}
+
+.ui_window__foot {
+    margin-right: 0px;
+}
+
+.ui_window__buttons {
+    text-align: right !important;
+    margin: 0 -3px -2px -3px;
+}
+
+.btn.skin_outset, button:not(.unstyled).skin_outset, input[type="reset"].skin_outset, input[type="submit"].skin_outset, input[type="button"].skin_outset, .ui_window.skin_outset, .ui_menu--bar .ui_menu__submenu ul.skin_outset, .ui_menu--menu ul.skin_outset, .ui_menu--menu .ui_menu__submenu ul.skin_outset {
+    border: none;
+    box-shadow: none;
+}
+
+button:not(.unstyled).pressed {
+    box-shadow: none;
+    border: none;
+}
+
+.ui_menu--scroller > .ui_menu__down_handler, .ui_menu--scroller > .ui_menu__down_handler:disabled {
+    border-top: none !important;
+}
+
+.ui_menu--scroller > .ui_menu__up_handler, .ui_menu--scroller > .ui_menu__up_handler:disabled {
+    border-bottom: none !important;
+}
+
+.ui_menu li hr {
+    margin-top: 1px;
+}
+
+.ui_window--active .ui_window__head, .ui_window__head {
+    background: none;
+}
+
+.ui_window__foot {
+    margin-right: 1px;
+}
+
+.ui_window_docked {
+    max-width: 44px;
+}
+
+.ui_window_docked__icon {
+    width: 32px;
+    height: 32px;
+}
+
+.ui_window_docked__text {
+    display: none;
+}
+
+#s42_taskbar {
+    height: 43px;
+    align-items: flex-end;
+}
+
+#s42_start, .ui_window_docked {
+    height: 36px;
+    padding-top: 3px;
+}
+
+.ui_window_docked--minimized {
+    background-image: none !important;
+    border-bottom-style: none;
+    background-color: #444 !important;
+}
+
+#s42_start > span {
+    display: none;
+}
+
+#s42_start {
+    margin: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 100%;
+}
+
+#s42_start > img {
+    height: 24px;
+    width: 24px;
+}
+
+.ui_menu__separator {
+    background-color: none;
+    border-bottom: none;
+    margin-top: -1px;
+}
+
+.ui_explorer__nav__prev::before {
+    content: "◂";
+    font-size: 16px;
+    bottom: -1px;
+    position: relative;
+}
+
+.ui_explorer__nav__prev {
+    font-size: 0px;
+}
+
+.ui_explorer__nav__home img {
+    display: none;
+}
+
+.ui_explorer__nav__home::before {
+    content: "Home"
+}
+
+.ui_explorer__nav__prev::before {
+    content: "◂";
+    font-size: 16px;
+    bottom: -1px;
+    position: relative;
+}
+
+.ui_explorer__nav__prev {
+    font-size: 0px;
+}
+
+.ui_explorer__nav__home img {
+    display: none;
+}
+
+.ui_explorer__nav__home::before {
+    content: "Home"
+}
+
+.app_textarea {
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    border: none;
+    background-color: transparent;
+}
+
+.ui_explorer__selected_file {
+    border: none !important;
+}
+
+#s42_taskbar button {
+    border: none;
+    background-color: transparent;
+}
+
+::selection {
+    background: var(--select);
+    color: var(--textcol);
+    text-shadow: none;
+}
+
+.btn:focus, button:focus, input:focus {
+    box-shadow: inset 0 0 2px 0px var(--select) !important;
+}
+
+
+
+
+/*Palette-dependant stuff*/
+
+
+
+
+
+.skin_inset, .skin_base, .skin_inset_deep, .skin_outset_deep, .skin_light, .skin_dark, .ui_window, .ui_alert--help .ui_alert__text {
+    background-color: var(--main);
+    color: var(--textcol);
+}
+
+#s42_clock {
+    color: var(--textcol);
+}
+
+.ui_window__head.ui_window__head > button {
+    color: var(--border) !important;
+}
+
+.ui_window__head.ui_window__head > button:hover {
+    color: var(--textcol) !important;
+    background-color: transparent !important;
+}
+
+.ui_window__head.ui_window__head > button:active {
+    color: var(--headpress) !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.ui_window__head.ui_window__head > button:focus {
+    box-shadow: none !important;
+}
+
+.ui_window__head__close.ui_window__head__close.ui_window__head__close {
+    color: var(--close);
+}
+
+.ui_window__head__close.ui_window__head__close.ui_window__head__close:hover {
+    color: var(--closehover) !important;
+}
+
+.ui_window__head__close.ui_window__head__close.ui_window__head__close:active {
+    color: var(--closepress) !important;
+}
+
+.btn, button:not(.unstyled) {
+    color: var(--textcol);
+    box-shadow: none;
+    background-color: var(--button);
+    border: 1px solid var(--border);
+}
+
+#s42_taskbar button:not(.unstyled):hover {
+    background-color: var(--hover);
+}
+
+#s42_taskbar button:not(.unstyled):active {
+    background-color: var(--taskbarpress);
+    border: none !important;
+}
+
+#s42_taskbar button:not(.unstyled):focus {
+    box-shadow: none !important;
+}
+
+.ui_menu__item__text, .ui_icon, .ui_explorer__selected_file {
+    color: var(--textcol);
+}
+
+.btn:hover, button:not(.unstyled):hover {
+    background-color: var(--button);
+    border: 1px solid var(--borderhover);
+}
+
+.btn:active, button:not(.unstyled):active {
+    background-color: var(--press);
+    border: 1px solid var(--borderpress) !important;
+}
+
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, textarea {
+    color: var(--textcol);
+    background-color: var(--main);
+    border: 1px solid var(--border);
+}
+
+.ui_window {
+    border: 1px solid var(--border);
+}
+
+.btn.skin_outset, button:not(.unstyled).skin_outset, input[type="reset"].skin_outset, input[type="submit"].skin_outset, input[type="button"].skin_outset, .ui_window.skin_outset, .ui_menu--bar .ui_menu__submenu ul.skin_outset, .ui_menu--menu ul.skin_outset, .ui_menu--menu .ui_menu__submenu ul.skin_outset {
+    background-color: var(--main);
+}
+
+.ui_explorer__nav > button, .ui_explorer__nav > input {
+    background-color: var(--main) !important;
+    border: none !important;
+}
+
+.ui_explorer__nav > button:hover, .ui_explorer__nav > input:hover, .ui_explorer__nav > button:active, .ui_explorer__nav > input:active {
+    border: none !important;
+}
+
+.ui_explorer__nav > button:focus, .ui_explorer__nav > input:focus {
+    box-shadow: none !important;
+}
+
+.ui_explorer__nav__input {
+    min-width: 20px;
+}
+
+.ui_menu--bar .ui_menu__submenu ul, .ui_menu--menu ul, .ui_menu--menu .ui_menu__submenu ul {
+    background-color: var(--main);
+}
+
+.ui_menu--menu ul, .ui_menu--menu .ui_menu__submenu ul, .ui_menu--bar .ui_menu__submenu ul {
+    border: 1px solid var(--border) !important;
+    box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.7);
+}
+
+button:not(.unstyled).pressed {
+    border-bottom: 1px solid var(--select) !important;
+}
+
+.ui_menu__item__ico, .ui_menu--menu .ui_menu__item--opener::after {
+    color: var(--textcol);
+}
+
+.ui_menu--scroller > .ui_menu__down_handler, .ui_menu--scroller > .ui_menu__down_handler:disabled {
+    background-color: var(--main);
+    border: 1px solid var(--border);
+}
+
+.ui_menu--scroller > .ui_menu__up_handler, .ui_menu--scroller > .ui_menu__up_handler:disabled {
+    background-color: var(--main);
+    border: 1px solid var(--border);
+}
+
+.ui_menu li hr {
+    border-top: var(--border) 1px solid;
+}
+
+.ui_window__buttons {
+    background-color: var(--buttonarea);
+}
+
+.btn:active:not(:disabled), button:not(.unstyled):active:not(:disabled), input[type="reset"]:active:not(:disabled), input[type="submit"]:active:not(:disabled), input[type="button"]:active:not(:disabled), .btn.active, button:not(.unstyled).active, input[type="reset"].active, input[type="submit"].active, input[type="button"].active, .btn.pressed, button:not(.unstyled).pressed, input[type="reset"].pressed, input[type="submit"].pressed, input[type="button"].pressed, .btn.selected, button:not(.unstyled).selected, input[type="reset"].selected, input[type="submit"].selected, input[type="button"].selected, .btn.always-pressed, button:not(.unstyled).always-pressed, input[type="reset"].always-pressed, input[type="submit"].always-pressed, input[type="button"].always-pressed {
+    box-shadow: none;
+}
+
+.btn:focus, button:focus, input[type="reset"]:focus, input[type="submit"]:focus, input[type="button"]:focus {
+    outline: none;
+}
+
+.ui_menu--menu .ui_menu__item--focus, .ui_menu--bar > ul > .ui_menu__item--focus, .ui_menu--bar .ui_menu__submenu .ui_menu__item--focus {
+    background-color: var(--hover);
+}
+
+.ui_notif {
+    background: var(--main);
+    border: 1px solid var(--border);
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--textcol);
+  	position: relative;
+    margin-top: 6px;
+    transform: translateX(12px) translateY(-45px);
+    animation-fill-mode: forwards;
+}
+
+.ui_notif span {
+    background: transparent;
+    color: var(--close);
+    border: none;
+    top: 7px;
+    right: 6px;
+    text-align: center;
+    font-family: px_icons;
+    font-weight: 300;
+    font-size: 0px;
+    transition: color 0.2s;
+}
+
+.ui_notif span::after {
+    content: "e";
+    font-size: 8px;
+}
+
+.ui_notif span:hover {
+    color: var(--closehover);
+    border: none;
+}
+
+.ui_notif:last-child::after {
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #000 transparent transparent;
+    margin-right: -10px;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;transform:translateX(12px)translateY(-5px)}
+    100% {opacity:1;transform:translateX(12px)translateY(-45px)}
+}
+
+
+
+
+/*Settings-dependant stuff*/
+
+
+
+
+#s42_feed {
+    display: none;
+}
+
+.ui_window__head__title {
+    position: relative;
+    bottom: 2px;
+}

@@ -1,0 +1,123 @@
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="stylesheet" href="wizard.css">
+    <script src="wizard.js"></script>
+</head>
+<body>
+    <div id="w103_void">
+        <div id="w103_canvas" class="test">
+            <div id="w103_title" class="test">
+                <h2><b>Win103</b> Setup</h2>
+            </div>
+            <div id="w103_crow" class="test">
+                <div id="w103_progsidebar" class="test">
+                    <span><img src="prep.png">Preparing to run Win103 Setup</span>
+                    <span class="optional"><img src="ftch.png">Fetching files from repository</span>
+                    <span><img src="copy.png">Copying Win103 files to WINDOWS93</span>
+                    <span><img src="cstm.png">Customizing Win103</span>
+                    <span><img src="rtrt.png">Restarting WINDOWS93</span>
+                </div>
+                <div id="w103_window" class="test">
+                    <div class="window" style="width: 650px;height:360px;">
+                        <div class="title-bar">
+                            <div class="title-bar-text">Win103 Installer</div>
+                        </div>
+                        <div id="w103_installmethod">
+                            <div class="window-body w103_installerbody">
+                                <pre><img src="https://www.windows93.net/c/sys/img/wizard.png"></pre>
+                                <div class="w103_installertext">
+                                    <p>Welcome to the Win103 Setup.<br>
+                                    With Win103, you can use WINDOWS93 with a fresh and modern coat of paint, all while being able to customize the entire experience to your liking.</p>
+                                    <br><br><p>To continue, choose an installation method.</p>
+                                    <fieldset>
+                                        <div class="field-row">
+                                            <input id="w103_fetch" type="radio" name="installMethod">
+                                            <label for="w103_fetch">Fetch latest Win103 version from the GitLab repo (recommended)</label>
+                                        </div>
+                                        <div class="field-row">
+                                            <input id="w103_copy" type="radio" name="installMethod">
+                                            <label for="w103_copy">Install Win103 version 1.0</label>
+                                        </div>
+                                    </fieldset>
+                                    <div class="buttonSpace"><button id="w103_installNext">Next</button></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="w103_installing" style="display:none">
+                            <div class="window-body w103_installerbody">
+                                <pre><img src="https://www.windows93.net/c/sys/img/wizard.png"></pre>
+                                <div class="w103_installertext">
+                                    <p id="w103_fetchtext">Fetching latest Win103 version from <a target="_blank" href="https://gitlab.com/Driftini/win103/">the Win103 Gitlab repo</a>...<br>
+                                    Please wait...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="w103_customize" style="display:none">
+                            <div class="window-body w103_installerbody">
+                                <pre><img src="https://www.windows93.net/c/sys/img/wizard.png"></pre>
+                                <div class="w103_installertext">
+                                    <p>Win103 files have been copied successfully to WINDOWS93.<br>
+                                    Before rebooting, you can choose which modules of Win103 will be enabled or disabled.<br>
+                                    If you wish to do this later, you can: simply open Win103's dashboard and go to the settings tab.
+                                    </p>
+                                    <fieldset>
+                                        <legend>Update automation</legend>
+                                        <div class="field-row">
+                                            <input id="w103_upcheck" type="radio" name="autoUpdates">
+                                            <label for="w103_upcheck">Automatically check for updates on boot</label>
+                                        </div>
+                                        <div class="field-row">
+                                            <input id="w103_upinstall" type="radio" name="autoUpdates">
+                                            <label for="w103_upinstall">Automatically check for updates and install them on boot</label>
+                                        </div>
+                                        <div class="field-row">
+                                            <input id="w103_upnone" type="radio" name="autoUpdates">
+                                            <label for="w103_upnone">None of the above</label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Theme</legend>
+                                        <div class="field-row">
+                                            <input id="w103_thdark" type="radio" name="firstTheme">
+                                            <label for="w103_thdark">Dark</label>
+                                        </div>
+                                        <div class="field-row">
+                                            <input id="w103_thlight" type="radio" name="firstTheme">
+                                            <label for="w103_thlight">Light</label>
+                                        </div>
+                                        <div class="field-row">
+                                            <input id="w103_thclassic" type="radio" name="firstTheme">
+                                            <label for="w103_thclassic">Classic</label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Miscellaneous</legend>
+                                        <div class="field-row">
+                                            <input id="w103_boot" type="checkbox">
+                                            <label for="w103_boot">Boot logo replacement</label>
+                                        </div>
+                                        <div class="field-row">
+                                            <input id="w103_thterm" type="checkbox">
+                                            <label for="w103_thterm">White terminal text</label>
+                                        </div>
+                                        <div class="field-row">
+                                            <input id="w103_rss" type="checkbox">
+                                            <label for="w103_rss">RSS tray icon</label>
+                                        </div>
+                                        <div class="field-row">
+                                            <input id="w103_dash" type="checkbox">
+                                            <label for="w103_dash">Dashboard tray icon</label>
+                                        </div>
+                                    </fieldset>
+                                    <div class="buttonSpace"><button id="w103_installRestart">Restart</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
