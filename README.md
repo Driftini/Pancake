@@ -1,2 +1,38 @@
-# Pancake
-A Windows 10-inspired theme for http://windows93.net
+# Windows103
+A Windows 10-inspired theme for WINDOWS93, also coming with a couple extra tools.
+## Features
+The theme will change the looks of pretty much everything except most of the applications (I might style them in future updates).
+There will also be a dashboard usable to quickly customize its settings, for example you can choose whether to use the light theme or the dark one.
+## Installation (once released)
+Get the desired version's installer script from the repo's releases page, drag and drop it into WINDOWS93.
+
+Open the Terminal and enter `js PATH`, where `PATH` must be replaced with the installer's filepath.
+
+A prompt will pop up, warning you that **proceeding will result in any unsaved data being lost.**
+
+Upon proceeding, the setup program will take up the entire screen. Here you can choose how to install Win103:
+* Copying the version packed in the installer to WINDOWS93
+* Fetching the latest version from the GitHub repo
+
+Next, the files will be copied into WINDOWS93. The process may take a little longer if you're fetching the latest version from GitHub.
+
+You will be able to edit some optional settings, such as:
+* Automatic update checking
+* Automatic update installation
+* Theme (Light/Dark/Classic)
+* Boot logo replacement
+* Terminal theme
+* RSS feed tray icon
+* Dashboard tray icon
+
+Keep in mind you can also change the settings after the installation by accessing the dashboard.
+
+Once you're done with customization, WINDOWS93 will reboot back into the desktop.
+## Uninstalling
+If you wish to entirely remove Win103 from WINDOWS93, access the dashboard and go to the settings tab.
+
+Scroll down until you find the **Uninstall Win103** button.
+
+Clicking on it will result in a prompt warning you that **all the Win103 data, including settings and any eventual extra files stored in /a/.win103/ will be lost upon proceeeding**.
+
+On confirmation, Win103 will erase all its files and WINDOWS93 will reboot.
