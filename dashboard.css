@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-:root {
-    --main: #000;
-    --textcol: #fff;
-    --border: #333;
-    --button: #111;
-    --hover: #222;
-    --borderhover: #555;
-}
-
 body {
     margin: 0;
     background-color: var(--main);

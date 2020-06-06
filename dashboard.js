@@ -1,3 +1,8 @@
+// UPDATE VALUES
+// 0: no automation
+// 1: check on boot
+// 2: check & install on boot
+
 window.onload = () => {
     document.getElementById("bar_themes").addEventListener("click",w103.themes)
     document.getElementById("bar_update").addEventListener("click",w103.update)

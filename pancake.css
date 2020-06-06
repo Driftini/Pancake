@@ -226,8 +226,11 @@ button:not(.unstyled).pressed {
 
 
 
+.ui_window {
+    background-color: var(--window);
+}
 
-.skin_inset, .skin_base, .skin_inset_deep, .skin_outset_deep, .skin_light, .skin_dark, .ui_window, .ui_alert--help .ui_alert__text {
+.skin_inset, .skin_base, .skin_inset_deep, .skin_outset_deep, .skin_light, .skin_dark, .ui_alert--help .ui_alert__text {
     background-color: var(--main);
     color: var(--textcol);
 }
@@ -237,11 +240,11 @@ button:not(.unstyled).pressed {
 }
 
 .ui_window__head.ui_window__head > button {
-    color: var(--border) !important;
+    color: var(--head) !important;
 }
 
 .ui_window__head.ui_window__head > button:hover {
-    color: var(--textcol) !important;
+    color: var(--headhover) !important;
     background-color: transparent !important;
 }
 
@@ -256,7 +259,7 @@ button:not(.unstyled).pressed {
 }
 
 .ui_window__head__close.ui_window__head__close.ui_window__head__close {
-    color: var(--close);
+    color: var(--close) !important;
 }
 
 .ui_window__head__close.ui_window__head__close.ui_window__head__close:hover {

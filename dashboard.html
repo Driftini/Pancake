@@ -17,12 +17,13 @@
                 <span id="t_light">Light</span>
             </span>
             <span id="t_classic">Classic</span>
+            <footer><i>Changing theme will reboot WINDOWS93.</i></footer>
         </div>
     </div>
     <div id="update">
         <h1>Update</h1>
         <div class="updatecontent">
-            <span class="row"><label>Pancake version alpha-0.2</label><label id="changelog">Read the changelog</label></span>
+            <span class="row"><label>Pancake version dev0.2</label><label id="changelog">Read the changelog</label></span>
             <p id="lastUpdate">Last update: 05/06/2020</p>
             <span class="centerRow">
                 <span id="u_check">
@@ -41,6 +42,7 @@
             <span class="row"><input type="checkbox" id="s_whiteterm"><label for="s_whiteterm">White terminal text</label></span>
             <span class="row"><input type="checkbox" id="s_rsstray"><label for="s_rsstray">RSS feed tray icon</label></span>
             <span class="row"><input type="checkbox" id="s_dashtray"><label for="s_dashtray">Pancake Dashboard tray icon</label></span>
+            <span class="row"><input type="checkbox" id="s_centertitle"><label for="s_centertitle">Do not center window titles (may fix issues in macOS)</label></span>
             <span class="centerRow">
                 <span id="s_save">
                     Apply settings (requires reboot)
@@ -55,6 +57,10 @@
         let dashstyle = document.createElement("style")
         top.$file.open("/a/.pancake/dashboard/dashboard.css","String",function(e){dashstyle.innerHTML = e})
         document.head.appendChild(dashstyle)
+
+        let dashvars = document.createElement("style")
+        top.$file.open("/a/boot/pancake-vars.css","String",function(e){dashvars.innerHTML = e})
+        document.head.appendChild(dashvars)
 
         let dashscript = document.createElement("script")
         top.$file.open("/a/.pancake/dashboard/dashboard.js","String",function(e){dashscript.innerHTML = e})
