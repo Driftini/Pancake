@@ -14,7 +14,7 @@ Upon proceeding, the setup program will take up the entire screen. Here you can 
 
 Next, the files will be copied into WINDOWS93. The process may take a little longer if you're fetching the latest version from GitHub.
 
-You will be able to edit some optional settings, such as:
+You will be able to edit some settings, such as:
 * Automatic update checking
 * Automatic update installation
 * Theme (Light/Dark/Classic)
@@ -22,6 +22,7 @@ You will be able to edit some optional settings, such as:
 * Terminal theme
 * RSS feed tray icon
 * Dashboard tray icon
+* Not centering window titles (can fix window titles being too high)
 
 Keep in mind you can also change the settings after the installation by accessing the dashboard.
 
@@ -31,6 +32,6 @@ If you wish to entirely remove Pancake from WINDOWS93, access the dashboard and 
 
 Scroll down until you find the **Uninstall Pancake** button.
 
-Clicking on it will result in a prompt warning you that **all the Win103 data, including settings and any eventual extra files stored in /a/.win103/ will be lost upon proceeeding**.
+Clicking on it will result in a prompt warning you that **all the Pancake data, including settings and any eventual extra files stored in /a/.pancake/ will be lost upon proceeeding**.
 
-On confirmation, Win103 will erase all its files and WINDOWS93 will reboot.
+On confirmation, Pancake will erase all its files and WINDOWS93 will reboot.
