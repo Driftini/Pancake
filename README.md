@@ -1,4 +1,4 @@
-# Windows103
+# Pancake
 A Windows 10-inspired theme for WINDOWS93, also coming with a couple extra tools.
 ## Features
 The theme will change the looks of pretty much everything except most of the applications (I might style them in future updates).
@@ -10,7 +10,7 @@ Open the Terminal and enter `js PATH`, where `PATH` must be replaced with the in
 
 A prompt will pop up, warning you that **proceeding will result in any unsaved data being lost.**
 
-Upon proceeding, the setup program will take up the entire screen. Here you can choose how to install Win103:
+Upon proceeding, the setup program will take up the entire screen. Here you can choose how to install Pancake:
 * Copying the version packed in the installer to WINDOWS93
 * Fetching the latest version from the GitHub repo
 
@@ -29,9 +29,9 @@ Keep in mind you can also change the settings after the installation by accessin
 
 Once you're done with customization, WINDOWS93 will reboot back into the desktop.
 ## Uninstalling
-If you wish to entirely remove Win103 from WINDOWS93, access the dashboard and go to the settings tab.
+If you wish to entirely remove Pancake from WINDOWS93, access the dashboard and go to the settings tab.
 
-Scroll down until you find the **Uninstall Win103** button.
+Scroll down until you find the **Uninstall Pancake** button.
 
 Clicking on it will result in a prompt warning you that **all the Win103 data, including settings and any eventual extra files stored in /a/.win103/ will be lost upon proceeeding**.
 
