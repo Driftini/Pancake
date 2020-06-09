@@ -1,0 +1,1 @@
+document.getElementById("s42_start").children[0].src = "https://gitlab.com/UmbraGIR/win103/-/raw/dev/res/hires.png"
