@@ -3,9 +3,15 @@
     --textcol: #fff;
     --select: #07f;
     --buttonarea: #111;
+
     --window: #000;
+    --windowactivegradient1: #07f;
+    --windowactivegradient2: #0077ff70;
+    --windowinactivegradient1: #ffffff33;
+    --windowinactivegradient2: transparent;
     
     --taskbarpress: #333;
+    --taskbardocked: #444;
 
     --button: #111;
     --border: #333;
@@ -16,11 +22,11 @@
     --press: #333;
     --borderpress: #555;
 
-    --head: #333;
+    --head: #ffffff5f;
     --headhover: #fff;
     --headpress: #aaa;
 
-    --close: #333;
+    --close: #ffffff5f;
     --closehover: #f00;
     --closepress: #a00;
 }

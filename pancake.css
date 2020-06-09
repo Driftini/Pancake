@@ -1,11 +1,8 @@
-@font-face {
-    font-family: Segoe UI;
-    src: url("https://gitlab.com/Driftini/win103/-/raw/dev/res/segoe-ui.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 html, body, button, input, select, option, textarea {
-    font-family: Segoe UI, sans-serif;
-    font-size: 13px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
     font-weight: 300;
 }
 
@@ -13,11 +10,6 @@ html, body, button, input, select, option, textarea {
     line-height: 13px;
     position: relative;
     bottom: 1px;
-}
-
-.skin_background {
-    background: url(https://gitlab.com/UmbraGIR/win103/raw/dev/res/windows-10-hero-wallpaper-4k.jpg);
-    background-size: cover;
 }
 
 #s42_notif {
@@ -39,7 +31,7 @@ html, body, button, input, select, option, textarea {
 .ui_window__head__pin, .ui_window__head__config, .ui_window__head__reload, .ui_window__head__help, .ui_window__head__minimize, .ui_window__head__maximize, .ui_window__head__maximized, .ui_window__head__close {
     width: 17px;
     height: 17px;
-    margin-left: 0px;
+    margin-left: 15px;
     line-height: 19px !important;
     background-color: transparent !important;
     transition: 0.2s !important;
@@ -60,6 +52,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, te
 }
 
 .ui_window {
+    padding: 0;
     box-shadow: 0 0 24px 1px rgba(0,0,0,0.8);
 }
 
@@ -96,6 +89,16 @@ button:not(.unstyled).pressed {
 
 .ui_window--active .ui_window__head, .ui_window__head {
     background: none;
+    
+}
+
+.ui_window--active .ui_window__head {
+    background-image: linear-gradient(90deg, var(--windowactivegradient1), var(--windowactivegradient2));
+}
+
+.ui_window__head {
+    padding: 3px 5px;
+    background-image: linear-gradient(90deg, var(--windowinactivegradient1), var(--windowinactivegradient2));
 }
 
 .ui_window__foot {
@@ -128,7 +131,7 @@ button:not(.unstyled).pressed {
 .ui_window_docked--minimized {
     background-image: none !important;
     border-bottom-style: none;
-    background-color: #444 !important;
+    background-color: var(--taskbardocked) !important;
 }
 
 #s42_start > span {
@@ -143,8 +146,8 @@ button:not(.unstyled).pressed {
 }
 
 #s42_start > img {
-    height: 24px;
-    width: 24px;
+    height: 30px;
+    width: 30px;
 }
 
 .ui_menu__separator {
@@ -218,19 +221,7 @@ button:not(.unstyled).pressed {
     box-shadow: inset 0 0 2px 0px var(--select) !important;
 }
 
-
-
-
-/*Palette-dependant stuff*/
-
-
-
-
-.ui_window {
-    background-color: var(--window);
-}
-
-.skin_inset, .skin_base, .skin_inset_deep, .skin_outset_deep, .skin_light, .skin_dark, .ui_alert--help .ui_alert__text {
+.skin_inset, .skin_base, .skin_inset_deep, .skin_outset_deep, .skin_light, .skin_dark, .ui_window, .ui_alert--help .ui_alert__text {
     background-color: var(--main);
     color: var(--textcol);
 }
@@ -244,7 +235,7 @@ button:not(.unstyled).pressed {
 }
 
 .ui_window__head.ui_window__head > button:hover {
-    color: var(--headhover) !important;
+    color: var(--textcol) !important;
     background-color: transparent !important;
 }
 
@@ -259,7 +250,7 @@ button:not(.unstyled).pressed {
 }
 
 .ui_window__head__close.ui_window__head__close.ui_window__head__close {
-    color: var(--close) !important;
+    color: var(--close);
 }
 
 .ui_window__head__close.ui_window__head__close.ui_window__head__close:hover {
@@ -397,7 +388,7 @@ button:not(.unstyled).pressed {
 
 .ui_notif span {
     background: transparent;
-    color: var(--close);
+    color: #ffffff5f;
     border: none;
     top: 7px;
     right: 6px;
@@ -418,6 +409,11 @@ button:not(.unstyled).pressed {
     border: none;
 }
 
+.ui_notif span:active {
+    color: var(--closepress);
+    border: none;
+}
+
 .ui_notif:last-child::after {
     border-style: solid;
     border-width: 0 20px 20px 0;
@@ -430,19 +426,12 @@ button:not(.unstyled).pressed {
     100% {opacity:1;transform:translateX(12px)translateY(-45px)}
 }
 
-
-
-
-/*Settings-dependant stuff*/
-
-
-
-
 #s42_feed {
     display: none;
 }
 
 .ui_window__head__title {
     position: relative;
-    bottom: 2px;
+    bottom: 0px;
+    text-shadow: 1px 0 5px #000
 }
