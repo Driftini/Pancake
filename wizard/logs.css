@@ -1,0 +1,24 @@
+.log {
+	background-color: black !important;
+	height: 75%;
+}
+
+.log > label:last-of-type:after {
+	content: "_";
+	animation-name: logBlink;
+	animation-duration: 0.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes logBlink {
+0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}

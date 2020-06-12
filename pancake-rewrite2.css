@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+html, body, button, input, select, option, textarea {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+::selection {
+    background: var(--select);
+    color: var(--textcol);
+    text-shadow: none;
+}
+
+.ui_window {
+    border: 1px solid var(--border);
+    padding: 0;
+    box-shadow: 0 0 24px 1px rgba(0,0,0,0.8);
+    color: var(--textcol);
+    background-color: var(--window);
+}
+
+.btn:active:not(:disabled), button:not(.unstyled):active:not(:disabled), input[type="reset"]:active:not(:disabled), input[type="submit"]:active:not(:disabled), input[type="button"]:active:not(:disabled), .btn.active, button:not(.unstyled).active, input[type="reset"].active, input[type="submit"].active, input[type="button"].active, .btn.pressed, button:not(.unstyled).pressed, input[type="reset"].pressed, input[type="submit"].pressed, input[type="button"].pressed, .btn.selected, button:not(.unstyled).selected, input[type="reset"].selected, input[type="submit"].selected, input[type="button"].selected, .btn.always-pressed, button:not(.unstyled).always-pressed, input[type="reset"].always-pressed, input[type="submit"].always-pressed, input[type="button"].always-pressed, .skin_inset, .skin_base, .skin_inset_deep, .skin_outset_deep, .skin_light, .skin_dark, .ui_alert--help .ui_alert__text, .btn.skin_outset, button:not(.unstyled).skin_outset, input[type="reset"].skin_outset, input[type="submit"].skin_outset, input[type="button"].skin_outset, .ui_window.skin_outset, .ui_menu--bar .ui_menu__submenu ul.skin_outset, .ui_menu--menu ul.skin_outset, .ui_menu--menu .ui_menu__submenu ul.skin_outset
+{
+    background-color: var(--main);
+    color: var(--textcol);
+    border: none;
+    box-shadow: none;
+}
+
+.ui_window__head {
+    padding: 3px 5px;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, var(--windowinactivegradient1), var(--windowinactivegradient2));
+}
+
+.ui_window--active .ui_window__head {
+    background-image: linear-gradient(90deg, var(--windowactivegradient1), var(--windowactivegradient2));
+}
+
+.ui_window__head__title {
+    text-shadow: 1px 0 5px #000;
+    color: var(--titlecol)
+}
+
+.btn, button:not(.unstyled) {
+    color: var(--textcol);
+    box-shadow: none;
+    background-color: var(--button);
+    border: 1px solid var(--border);
+}
+
+.btn:hover, button:not(.unstyled):not([class^=ui_window__head__]):hover {
+    background-color: var(--hover);
+    border: 1px solid var(--borderhover);
+}
+
+.btn:active, button:not(.unstyled):not([class^=ui_window__head__]):active {
+    background-color: var(--press);
+    border: 1px solid var(--borderpress) !important;
+}
+
+.ui_window__head > button {
+    height: 17px;
+    margin-left: 13px;
+    margin-right: 5px;
+    line-height: 19px !important;
+    background-color: transparent;
+    transition: 0.2s;
+    border: none;
+    color: var(--head);
+}
+
+.ui_window__head > button:hover {
+    color: var(--headhover);
+    background-color: transparent;
+}
+
+.ui_window__head > button:active {
+    color: var(--headpress) !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.ui_window__head > .ui_window__head__close {
+    color: var(--close);
+}
+
+.ui_window__head > .ui_window__head__close:hover {
+    color: var(--closehover);
+}
+
+.ui_window__head > .ui_window__head__close:active {
+    color: var(--closepress) !important;
+}
+
+.ui_menu__item__text, .ui_icon, .ui_explorer__selected_file, .ui_menu__item__ico, .ui_menu--menu .ui_menu__item--opener::after {
+    color: var(--textcol);
+}
+
+.ui_explorer__nav > button, .ui_explorer__nav > input {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.ui_explorer__nav.ui_explorer__nav.ui_explorer__nav > button:active {
+    border: none !important;
+    color: var(--navpress)
+}
+
+.ui_explorer__nav__prev {
+    font-size: 0px;
+}
+
+.ui_explorer__nav__prev::before {
+    content: "◂";
+    font-size: 16px;
+    bottom: -1px;
+    position: relative;
+}
+
+.ui_explorer__nav__home > img {
+    display: none;
+}
+
+.ui_explorer__nav__home::before {
+    content: "Home";
+}
+
+.ui_explorer__selected_file {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.ui_window__buttons {
+    background-color: var(--buttonarea);
+    text-align: right !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, textarea {
+    color: var(--textcol);
+    background-color: var(--main);
+    border: 1px solid var(--border);
+    box-shadow: none;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+.btn:focus, button:focus, input:focus {
+    box-shadow: inset 0 0 2px 0px var(--select) !important;
+}
+
+.app_textarea {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    border: none;
+    background-color: transparent;
+}
+
+.ui_notif:last-child::after {
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #000 transparent transparent;
+    margin-right: -10px;
+}
+
+.ui_notif {
+    background: var(--main);
+    border: 1px solid var(--border);
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--textcol);
+    position: relative;
+    margin-top: 6px;
+    transform: translateX(12px) translateY(-45px);
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;transform:translateX(12px)translateY(-5px)}
+    100% {opacity:1;transform:translateX(12px)translateY(-45px)}
+}
+
+.ui_notif span::after {
+    content: "e";
+    font-size: 8px;
+}
+
+.ui_notif span {
+    background: transparent;
+    color: #ffffff5f;
+    border: none;
+    top: 7px;
+    right: 6px;
+    text-align: center;
+    font-family: px_icons;
+    font-weight: 300;
+    font-size: 0px;
+    transition: color 0.2s;
+}
+
+#s42_taskbar {
+    height: 40px;
+    align-items: flex-end;
+}
+
+#s42_taskbar > button {
+    border: none;
+    background-color: transparent;
+}
+
+#s42_start {
+    margin: 0;
+    height: 100%;
+    padding: 0 8px;
+}
+
+#s42_start:active {
+    border: none !important;
+}
+
+#s42_start > img {
+    height: 30px;
+    width: 30px;
+}
+
+#s42_start > span, .ui_window_docked > span {
+    display: none;
+}
+
+#s42_dock > .ui_window_docked, #s42_dock > .ui_window_docked:hover, #s42_dock > .ui_window_docked:active {
+    max-width: 46px;
+    height: 36px;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+}
+
+#s42_start, .ui_window_docked {
+    margin-left: 1px;
+    margin-bottom: 1px;
+    padding-bottom: 0;
+}
+
+.ui_window_docked__icon {
+    width: 32px;
+    height: 32px;
+}
+
+#s42_taskbar .ui_window_docked.pressed {
+    border-bottom: 1px solid var(--select) !important;
+}
+
+#s42_taskbar button:hover {
+    background-color: var(--hover);
+}
+
+#s42_taskbar button:active {
+    background-color: var(--taskbarpress) !important;
+}
+
+#s42_taskbar .ui_window_docked--minimized.ui_window_docked--minimized {
+    background-image: none !important;
+    border: none !important;
+    background-color: var(--taskbardocked) !important;
+}
+
+.ui_menu--menu .ui_menu__item--focus, .ui_menu--bar > ul > .ui_menu__item--focus, .ui_menu--bar .ui_menu__submenu .ui_menu__item--focus {
+    background-color: var(--hover);
+}
+
+.ui_menu--menu ul, .ui_menu--menu .ui_menu__submenu ul, .ui_menu--bar .ui_menu__submenu ul {
+    border: 1px solid var(--border);
+    box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.7);
+    background-color: var(--main);
+}
+
+.ui_menu__separator {
+    border-bottom: none;
+    margin-top: -1px;
+}
+
+.ui_menu li hr {
+    border-top: var(--border) 1px solid;
+    margin-top: 1px;
+}
+
+.ui_menu__item__key {
+    color: var(--textcol)
+}

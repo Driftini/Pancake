@@ -62,7 +62,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, te
 
 .ui_window__buttons {
     text-align: right !important;
-    margin: 0 -3px -2px -3px;
+    margin: 0 -1px 0 0;
 }
 
 .btn.skin_outset, button:not(.unstyled).skin_outset, input[type="reset"].skin_outset, input[type="submit"].skin_outset, input[type="button"].skin_outset, .ui_window.skin_outset, .ui_menu--bar .ui_menu__submenu ul.skin_outset, .ui_menu--menu ul.skin_outset, .ui_menu--menu .ui_menu__submenu ul.skin_outset {
