@@ -163,7 +163,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, te
 .ui_notif:last-child::after {
     border-style: solid;
     border-width: 0 20px 20px 0;
-    border-color: transparent #000 transparent transparent;
+    border-color: transparent var(--main) transparent transparent;
     margin-right: -10px;
 }
 
@@ -191,8 +191,8 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, te
 
 .ui_notif span {
     background: transparent;
-    color: #ffffff5f;
-    border: none;
+    color: var(--close) !important;
+    border: none !important;
     top: 7px;
     right: 6px;
     text-align: center;
@@ -200,6 +200,14 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, te
     font-weight: 300;
     font-size: 0px;
     transition: color 0.2s;
+}
+
+.ui_notif span:hover {
+    color: var(--closehover) !important
+}
+
+.ui_notif span:active {
+    color: var(--closepress) !important
 }
 
 #s42_taskbar {
@@ -214,8 +222,12 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, te
 
 #s42_start {
     margin: 0;
+    margin-right: 8px;
     height: 100%;
     padding: 0 8px;
+    margin-right: 5px;
+    padding-right: 9px;
+
 }
 
 #s42_start:active {
@@ -243,6 +255,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, te
     margin-left: 1px;
     margin-bottom: 1px;
     padding-bottom: 0;
+    background-color: transparent !important;
 }
 
 .ui_window_docked__icon {
@@ -255,7 +268,7 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, te
 }
 
 #s42_taskbar button:hover {
-    background-color: var(--hover);
+    background-color: var(--hover) !important;
 }
 
 #s42_taskbar button:active {
@@ -290,4 +303,49 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, te
 
 .ui_menu__item__key {
     color: var(--textcol)
+}
+
+.ui_explorer--workspace > .ui_icon {
+    text-shadow: 0 0 4px #000, 0 0 3px #000 !important;
+}
+
+.skin_inset_deep {
+    margin-right: 0;
+}
+
+#s42_notif {
+    align-self: center;
+}
+
+#s42_feed img:last-of-type {
+    padding-right: 10px;
+    border-right: 1px solid var(--border)
+}
+
+#s42_clock {
+    font-size: 20px;
+    position: relative;
+    bottom: 7px;
+    margin-left: 5px;
+}
+
+.ui_menu--scroller > .ui_menu__down_handler, .ui_menu--scroller > .ui_menu__down_handler:disabled {
+    background-color: var(--main);
+    border: 1px solid var(--border);
+    border-top: none !important;
+}
+
+.ui_menu--scroller > .ui_menu__up_handler, .ui_menu--scroller > .ui_menu__up_handler:disabled {
+    background-color: var(--main);
+    border: 1px solid var(--border);
+    border-bottom: none !important;
+}
+
+.dashboardWindow {
+    min-width: 670px;
+    min-height: 450px;
+}
+
+.dashboardWindow .ui_window__head {
+    margin-bottom: 0;
 }

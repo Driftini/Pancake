@@ -1,8 +1,8 @@
 {
     "update": 0,
-    "bootlogo": false,
+    "bootlogo": true,
     "whiteterm": false,
-    "rsstray": false,
-    "dashtray": false,
-    "centertitle": true
+    "rsstray": true,
+    "dashtray": true,
+    "titlegradient": true
 }
