@@ -48,7 +48,7 @@ let w103 = {
         document.getElementById("themes").style.display = "none"
     },
     setDark: () => {
-        top.$db.set("boot/pancake-vars.css", `:root {
+        top.$file.save("/a/boot/pancake-vars.css", `:root {
     --main: #000;
     --textcol: #fff;
     --select: #07f;
@@ -82,10 +82,10 @@ let w103 = {
     --closehover: #f00;
     --closepress: #a00;
 }`)
-    $exe("reboot")
+    top.$exe("reboot")
     },
     setLight: () => {
-        top.$db.set("boot/pancake-vars.css", `:root {
+        top.$file.save("/a/boot/pancake-vars.css", `:root {
     --main: #eee;
     --textcol: #000;
     --select: #07f;
@@ -127,10 +127,10 @@ let w103 = {
 #s42_start > img {
     filter: invert(100%)
 }`)
-    $exe("reboot")
+    top.$exe("reboot")
     },
     setClassic: () => {
-        top.$db.set("boot/pancake-vars.css", `:root {
+        top.$file.save("/a/boot/pancake-vars.css", `:root {
     --main: silver;
     --textcol: #000;
     --select: #07f;
@@ -172,7 +172,35 @@ let w103 = {
 #s42_start > img {
     filter: invert(100%)
 }`)
-    $exe("reboot")
+    top.$exe("reboot")
+    },
+    saveSettings: () => {
+        top.$file.open("/a/.pancake/config.json","String",function(e){
+            let pancakeSaveConfig = JSON.parse(e)
+            let pancakeSaveCSS = ""
+
+            pancakeSaveConfig.bootlogo = document.getElementById("s_bootlogo").checked
+            pancakeSaveConfig.whiteterm = document.getElementById("s_whiteterm").checked
+            pancakeSaveConfig.rsstray = document.getElementById("s_rsstray").checked
+            pancakeSaveConfig.dashtray = document.getElementById("s_dashtray").checked
+            pancakeSaveConfig.titlegradient = document.getElementById("s_titlegradient").checked
+    
+            if (!document.getElementById("s_rsstray").checked) {
+                pancakeSaveCSS = pancakeSaveCSS + " " + "#s42_feed > img[alt='rss'] {display: none;}"
+            }
+
+            if (document.getElementById("s_titlegradient").checked) {
+                pancakeSaveCSS = pancakeSaveCSS + " " + ".ui_window--active .ui_window__head {background-image: linear-gradient(90deg, var(--windowactivegradient1), var(--windowactivegradient2));} .ui_window__head {background-image: linear-gradient(90deg, var(--windowinactivegradient1), var(--windowinactivegradient2));}"
+            }
+    
+            top.$db.set(".pancake/config.json", JSON.stringify(pancakeSaveConfig))
+            if (pancakeSaveCSS.length > 0) {
+                top.$db.set("boot/pancake-settable.css", pancakeSaveCSS)
+            } else {
+                top.$file.delete("/a/boot/pancake-settable.css")
+            }
+            top.$notif("Pancake", "Settings saved.<br>Reboot to apply changes.")
+        })
     }
 }
 
@@ -182,3 +210,14 @@ document.getElementById("bar_settings").addEventListener("click",w103.settings)
 document.getElementById("t_dark").addEventListener("click",w103.setDark)
 document.getElementById("t_light").addEventListener("click",w103.setLight)
 document.getElementById("t_classic").addEventListener("click",w103.setClassic)
+document.getElementById("s_save").addEventListener("click",w103.saveSettings)
+
+top.$file.open("/a/.pancake/config.json","String",function(e){
+    let pancakeSaveConfig = JSON.parse(e)
+
+    document.getElementById("s_bootlogo").checked = pancakeSaveConfig.bootlogo
+    document.getElementById("s_whiteterm").checked = pancakeSaveConfig.whiteterm
+    document.getElementById("s_rsstray").checked = pancakeSaveConfig.rsstray
+    document.getElementById("s_dashtray").checked = pancakeSaveConfig.dashtray
+    document.getElementById("s_titlegradient").checked = pancakeSaveConfig.titlegradient
+})

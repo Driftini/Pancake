@@ -4,13 +4,13 @@ body {
     font-family: "Pixelated MS Sans Serif", sans-serif;
     color: white;
     font-weight: 400;
+    user-select: none;
 }
 
 code {
     font-family: "Pixelated MS Sans Serif", sans-serif;
     font-weight: 700;
     color: red;
-    font-kerning: ;
 }
 
 p {
@@ -50,8 +50,8 @@ h2 {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -110,10 +110,6 @@ h2 {
     overflow: auto;
 }
 
-.test {
-    /*border: 1px dashed #f0f;*/
-}
-
 .optional {
     color: #888
 }
@@ -145,4 +141,34 @@ pre {
 
 fieldset {
     margin-bottom: 10px;
+}
+
+.log {
+    background-color: black !important;
+    height: 75%;
+    overflow-y: scroll;
+    user-select: text;
+}
+
+.log > li:last-of-type:after {
+    content: "_";
+    animation-name: logBlink;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes logBlink {
+    0% {visibility: hidden}
+    50% {visibility: hidden}
+    100% {visibility: visible}
+}
+
+#w103_logwindow {
+    display: none;
+}
+
+#w103_dockedlog {
+    position: absolute;
+    transform: translateX(-200px) translateY(289px);
 }
