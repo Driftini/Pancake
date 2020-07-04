@@ -3,26 +3,24 @@ A Windows 10-inspired theme for WINDOWS93, also coming with a couple extra tools
 ## Features
 The theme will change the looks of pretty much everything except most of the applications (I might style them in future updates).
 There will also be a dashboard usable to quickly customize its settings, for example you can choose whether to use the light theme or the dark one.
-## Installation (once released)
-Get the desired version's installer from the repo's releases page, drag and drop it into WINDOWS93.
+## Installation
+Get the desired version's `PancakeSetup.js` from the repo's releases page, drag and drop it into WINDOWS93.
 
-Open the installer and a prompt will pop up, warning you that **proceeding will result in any unsaved data being lost.**
+Execute the installer in the Terminal: you will be told that **proceeding will result in any unsaved data being lost.**
 
 Upon proceeding, the setup program will take up the entire screen. Here you can choose how to install Pancake:
 * Copying the version packed in the installer to WINDOWS93
-* Fetching the latest version from the GitHub repo
+* ~~Fetching the latest version from the GitHub repo~~
 
-Next, the files will be copied into WINDOWS93. The process may take a little longer if you're fetching the latest version from GitHub.
+Next, the files will be copied into WINDOWS93. ~~The process may take a little longer if you're fetching the latest version from GitHub.~~
 
 You will be able to edit some settings, such as:
-* Automatic update checking
-* Automatic update installation
+* ~~Automatic update checking~~
+* ~~Automatic update installation~~
 * Theme (Light/Dark/Classic)
-* Boot logo replacement
-* Terminal theme
+* ~~Boot logo replacement~~
 * RSS feed tray icon
-* Dashboard tray icon
-* Not centering window titles (can fix window titles being too high)
+* ~~Dashboard tray icon~~
 
 Keep in mind you can also change the settings after the installation by accessing the dashboard.
 
