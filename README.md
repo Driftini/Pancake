@@ -1,11 +1,20 @@
 # Pancake
 A Windows 10-inspired theme for WINDOWS93, also coming with a couple extra tools.
 ## Features
-The theme will change the looks of pretty much everything except most of the applications (I might style them in future updates).
+The theme will change the looks of pretty much everything except most of the applications.
 There will also be a dashboard usable to quickly customize its settings, for example you can choose whether to use the light theme or the dark one.
 ## Installation
+### Using the pre-generated Setup script
 Get the desired version's `PancakeSetup.js` from the repo's releases page, drag and drop it into WINDOWS93.
+### Generating a new Setup script
+This is completely optional, but allows you to easily install unreleased development versions or custom Pancake versions (although this might require editing `SETUPGEN.js`).
 
+**NOTE: You'll need Node.js for this to work.**
+
+Clone the desired branch and open your OS's terminal in the resulting folder.
+
+Run `node SETUPGEN.js`: after a while (should take no more than a couple seconds) you'll be informed that your Setup script has been generated. Finally, import the script into WINDOWS93.
+### Running the Setup
 Execute the installer in the Terminal: you will be told that **proceeding will result in any unsaved data being lost.**
 
 Upon proceeding, the setup program will take up the entire screen. Here you can choose how to install Pancake:
