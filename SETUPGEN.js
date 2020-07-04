@@ -63,7 +63,7 @@ function setupgen() {
                 throw "[ERROR] " + err
             }
             console.log("[INFO] Setup script generated successfully!")
-            console.log("You can either execute PancakeSetup.js in WINDOWS93's terminal to start the Setup or (recommended) create a shortcut in WINDOWS93 with its command set to \"js [PancakeSetup.js's content]\".")
+            console.log("You can either execute PancakeSetup.js in WINDOWS93's terminal to start the Setup or create a shortcut in WINDOWS93 with its command set to \"js [PancakeSetup.js's content]\".")
         })
     }
 }
