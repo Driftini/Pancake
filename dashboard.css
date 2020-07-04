@@ -13,7 +13,6 @@ body * {
 }
 
 #topbar {
-    border-bottom: 1px solid var(--border);
     height: 64px;
     display: flex;
     flex-direction: row;
@@ -31,16 +30,6 @@ body * {
     align-items: center;
     display: flex;
     justify-content: center;
-}
-
-#topbar > span:first-child {
-    border-left: none;
-    border-right: 1px solid var(--border);
-}
-
-#topbar > span:last-child {
-    border-left: 1px solid var(--border);
-    border-right: none;
 }
 
 #topbar > span:hover {

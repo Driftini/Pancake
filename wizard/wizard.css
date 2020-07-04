@@ -1,3 +1,12 @@
+::selection {
+    background-color: white;
+    color: black;
+}
+
+* {
+    transform: translate(0);
+}
+
 body {
     background-color: black;
     margin: 0;
@@ -5,6 +14,7 @@ body {
     color: white;
     font-weight: 400;
     user-select: none;
+    overflow: hidden;
 }
 
 code {
@@ -148,6 +158,9 @@ fieldset {
     height: 75%;
     overflow-y: scroll;
     user-select: text;
+    color: #aaa;
+    text-shadow: 1px 0 0 #aaa;
+    letter-spacing: 1px;
 }
 
 .log > li:last-of-type:after {
@@ -168,7 +181,7 @@ fieldset {
     display: none;
 }
 
-#w103_dockedlog {
+#w103_dockedlog#w103_dockedlog {
     position: absolute;
     transform: translateX(-200px) translateY(289px);
 }

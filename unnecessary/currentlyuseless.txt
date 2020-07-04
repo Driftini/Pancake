@@ -1,0 +1,31 @@
+UPDATE VALUES
+0: no automation
+1: check on boot
+2: check & install on boot
+
+
+var thmMain
+var thmTextCol
+var thmSelect
+var thmButtonArea
+var thmNavPress
+var thmWindow
+var thmTitleCol
+var thmWindowActiveGradient1
+var thmWindowActiveGradient2
+var thmWindowInactiveGradient1
+var thmWindowInactiveGradient2
+var thmTaskbarPress
+var thmTaskbarDocked
+var thmButton
+var thmBorder
+var thmHover
+var thmBorderHover
+var thmPress
+var thmBorderPress
+var thmHead
+var thmHeadHover
+var thmHeadPress
+var thmClose
+var thmCloseHover
+var thmClosePress
